@@ -1,0 +1,35 @@
+@use "../helpers/" as *;
+
+.footer {
+  background-color: var(--color-black-alt);
+
+  &__inner {
+    --footer-columns: 4;
+
+    display: grid;
+    grid-template-columns: repeat(var(--footer-columns), 1fr);
+    row-gap: rem(50);
+    padding-top: fluid(72, 25);
+    padding-bottom: fluid(55, 20);
+
+    @include tablet {
+      --footer-columns: 2;
+    }
+
+    @include mobile-s {
+      --footer-columns: 1;
+    }
+  }
+
+  &__list {
+    display: grid;
+    row-gap: rem(15);
+
+    &-link {
+      span {
+        font-weight: 700;
+        color: var(--color-yellow);
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@use "../helpers/" as *;
+
+.apartments {
+  position: relative;
+
+  &__title {
+    margin-bottom: fluid(90, 40);
+  }
+
+  &__list {
+    --columns: 2;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: (rem(30));
+
+    @include mobile {
+      --columns: 1;
+
+      justify-items: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__name {
+    position: absolute;
+    bottom: rem(40);
+    left: rem(50);
+  }
+}

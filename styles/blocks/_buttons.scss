@@ -1,0 +1,17 @@
+@use "../helpers/" as *;
+
+.button {
+  @include reset-button;
+
+  font-size: rem(14);
+  font-weight: 700;
+  line-height: 0.5;
+  color: var(--color-white);
+  background-color: var(--color-yellow);
+  padding: fluid(12, 10) fluid(55, 30);
+  height: 50px;
+
+  @include hover {
+    background-color: var(--color-yellow-alt);
+  }
+}

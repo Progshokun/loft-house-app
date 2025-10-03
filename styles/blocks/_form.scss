@@ -1,0 +1,38 @@
+@use "../helpers/" as *;
+
+.form {
+  --columns: 2;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: rem(35) rem(30);
+
+  @include mobile {
+    --columns: 1;
+
+    row-gap: rem(20);
+  }
+
+  &__input {
+    width: rem(255);
+    height: rem(50);
+    border: none;
+    background-color: rgba(#bebebe, 0.2);
+    color: var(--color-white);
+
+    &::placeholder {
+      color: var(--color-gray);
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  &__quote {
+    font-size: 13px;
+    text-align: center;
+
+    @include mobile {
+      order: 1;
+    }
+  }
+}

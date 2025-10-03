@@ -1,0 +1,21 @@
+@use "helpers" as *;
+
+:root {
+  --color-white: #ffffff;
+  --color-white-alt: #e7e7e7;
+  --color-black: #242b33;
+  --color-black-alt: #2d343c;
+  --color-black-9: rgba(36, 43, 51, 0.9);
+  --color-black-8: rgba(36, 43, 51, 0.8);
+  --color-yellow: #d4c17f;
+  --color-yellow-alt: #caa41a;
+  --color-gray: #bebebe;
+
+  --font-family-base: "Raleway", sans-serif;
+  --font-family-accent: "Playfair Display", sans-serif;
+
+  --container-width: #{rem(1110)};
+  --container-padding-x: #{rem(10)};
+
+  --transition-duration: 0.2s;
+}

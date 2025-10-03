@@ -1,0 +1,25 @@
+@use "../helpers/" as *;
+
+.video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    position: relative;
+    width: 650px;
+  }
+
+  &__button {
+    @include reset-button;
+    @include abs-center;
+
+    svg {
+      color: var(--color-yellow);
+
+      @include hover {
+        color: var(--color-yellow-alt);
+      }
+    }
+  }
+}

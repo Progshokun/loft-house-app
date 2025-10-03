@@ -1,0 +1,36 @@
+@use "../helpers/" as *;
+
+.burger {
+  @include reset-button;
+
+  width: 35px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+
+  span {
+    display: block;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  &.is-active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -7px);
+    }
+  }
+}

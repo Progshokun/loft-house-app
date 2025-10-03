@@ -1,0 +1,30 @@
+@use "../helpers/" as *;
+
+.cta {
+  padding-bottom: fluid(180, 80);
+
+  &__title {
+    margin-bottom: fluid(40, 20);
+  }
+
+  &__form {
+    display: flex;
+
+    @include desktop {
+      flex-direction: column;
+      margin-inline: fluid(80, 10);
+    }
+
+    input {
+      order: 1;
+
+      @include desktop {
+        width: 100%;
+      }
+    }
+
+    button {
+      order: 2;
+    }
+  }
+}

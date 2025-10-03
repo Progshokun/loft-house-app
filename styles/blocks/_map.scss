@@ -1,0 +1,16 @@
+@use "../helpers/" as *;
+
+.map {
+  position: relative;
+  padding-block: fluid(180, 80);
+
+  &__title {
+    margin-bottom: fluid(90, 45);
+  }
+
+  &__content {
+    iframe {
+      width: 100%;
+    }
+  }
+}
